@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="baristaMatic">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Barista-Matic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <nav class="container-fluid text-center header-container">
+    <h3 class="title">barista-matic</h3>
+  </nav>
+
+  <div class="container max-height content-container">
+    <div class="row">
+      <div class="col-xs-12 col-md-7 menu-container ">
+        <coffee-menu></coffee-menu>
+      </div>
+      <div class="col-xs-12 col-md-5 pantry-container">
+        <pantry></pantry>
+      </div>
+    </div>
+  </div>
+
+  <script src="node_modules/angular/angular.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
