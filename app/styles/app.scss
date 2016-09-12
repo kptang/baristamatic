@@ -1,0 +1,224 @@
+@import 'variables';
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+
+// common
+.inline {
+  display: inline-block;
+}
+
+.max-height {
+  height: 100%;
+}
+
+// layout
+html, body {
+  height: 100%;
+}
+
+.content-container {
+  .menu-container {
+    border-bottom: 1px solid black;
+  }
+
+  @media (min-width : $screen-md-min) {
+    > .row, .menu-container {
+      height: 100%;
+    }
+
+    .menu-container {
+      border-bottom: none;
+      border-right: 1px solid black;
+    }
+  }
+}
+
+.header-container {
+  background-color: $color-header-background;
+  color: white;
+  font-variant: small-caps;
+  margin-top: -1em;
+
+  @media (min-width : $screen-md-min) {
+    text-align: left;
+
+    .title {
+      margin-left: 15px;
+    }
+  }
+}
+
+.menu-container,
+.panel-container {
+  font-size: 1.4rem;
+}
+
+.pantry-table-container {
+  margin: 0 auto;
+  margin-bottom: 1em;
+  width: 70%;
+}
+
+// menu styles
+.menu-container .subtitle {
+  text-align: center;
+}
+
+#coffee-menu-selection {
+  width: 100px;
+}
+
+.menu-selection-container {
+  margin: 0 auto;
+  padding-bottom: 1em;
+
+  .form-group {
+    margin-bottom: 0.5em;
+  }
+
+  .order-status {
+    font-style: italic;
+    min-height: 19px;
+    text-transform: capitalize;
+  }
+
+  .error {
+    color: $color-error;
+    font-style: italic;
+  }
+}
+
+.selection-number {
+  align-items: center;
+  background: white;
+  border: 2px solid lighten(black, 40%);
+  border-radius: 50%;
+  display: flex;
+  height: 28px;
+  justify-content: center;
+  left: 8%;
+  padding: 0.75em;
+  position: absolute;
+  top: 10%;
+  width: 28px;
+  z-index: 1;
+
+  @media (min-width : $screen-sm-min) {
+    height: 36px;
+    width: 36px;
+  }
+
+  @media (min-width : $screen-md-min) {
+    left: 4%;
+    top: 5%;
+  }
+
+  @media (min-width : $screen-lg-min) {
+    top: 8%;
+  }
+}
+
+.menu-item-btn {
+  border-radius: 50%;
+  padding: 1.2em;
+  margin-bottom: 1em;
+  width: 100%;
+
+  &:hover {
+    background-color: darken(#03a9f4, 20%);
+    color: white;
+  }
+
+  &:focus, &:active, &:focus:active {
+    outline: none;
+  }
+
+  .menu-item-name {
+    text-transform: capitalize;
+  }
+
+  .menu-item-img {
+    width: 80%;
+    margin-left: 1.2em;
+    padding-bottom: 0.9em;
+    padding-top: 0.9em;
+  }
+
+  &[disabled], &[disabled]:hover {
+    background-color: $color-disabled;
+    border-color: $color-disabled;
+    color: black;
+
+    .menu-item-img {
+      opacity: 0.5;
+    }
+  }
+}
+
+.menu-item-btn, .selection-number {
+  font-size: 0.9em;
+
+  .menu-item-name {
+    font-size: 1.1em;
+  }
+
+  @media (min-width : $screen-sm-min) {
+    font-size: 1em;
+
+    .menu-item-name {
+      font-size: 1em;
+    }
+  }
+
+  @media (min-width : $screen-md-min) {
+    .menu-item-name {
+      font-size: 0.9em;
+    }
+  }
+
+  @media (min-width : $screen-lg-min) {
+    .menu-item-name {
+      font-size: 1em;
+    }
+  }
+}
+
+// pantry styles
+.pantry-table {
+  border: 1px solid black;
+
+  .pantry-table-header-row {
+    background-color: $color-table-header-background;
+    color: white;
+  }
+
+  .pantry-table-data-row {
+    &:nth-child(odd) {
+      background-color: $color-table-row-odd;
+    }
+
+    &:hover {
+      background-color: $color-highlight;
+      cursor: default;
+    }
+
+    .pantry-ingredient {
+      text-transform: capitalize;
+    }
+
+    .pantry-quantity {
+      padding-left: 2.5em;
+    }
+  }
+}
+
+.pantry-table, .restock-btn {
+  font-size: 1.1em;
+
+  @media (min-width : $screen-sm-min) {
+    font-size: 1.3em;
+  }
+
+  @media (min-width : $screen-md-min) {
+    font-size: 1.1em;
+  }
+}

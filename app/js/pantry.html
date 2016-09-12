@@ -1,0 +1,25 @@
+<div class="row col-xs-12 text-center">
+  <h2>Inventory</h2>
+</div>
+
+<div class="row pantry-table-container">
+  <div class="col-xs-12 pantry-table ">
+    <div class="row pantry-table-header-row">
+      <div class="col-xs-7 pantry-ingredient">Ingredient</div>
+      <div class="col-xs-5 pantry-quantity">Remaining</div>
+    </div>
+    <div ng-repeat="pantryItem in vm.pantry" class="row pantry-table-data-row">
+      <div class="col-xs-7 pantry-ingredient">
+        {{pantryItem.name}}
+      </div>
+      <div class="col-xs-5 pantry-quantity">
+        {{pantryItem.quantity}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row col-xs-12 text-center">
+  <button type="button" class="btn btn-default btn-primary restock-btn"
+          ng-click="vm.restock()">Restock Ingredients</button>
+</div>

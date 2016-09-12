@@ -1,0 +1,7 @@
+<button type="button" class="btn btn-default btn-primary text-center menu-item-btn"
+        ng-click="onClick(coffee)"
+        ng-disabled="!coffee.isAvailable">
+  <div class="menu-item-name">{{coffee.menuLabel}}</div>
+  <img class="menu-item-img" ng-src="{{coffee.imageUrl}}" />
+  <div class="menu-item-price">{{coffee.formattedPrice}}</div>
+</button>
